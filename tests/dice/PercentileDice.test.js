@@ -17,7 +17,7 @@ describe('PercentileDice', () => {
         notation: '4d%',
         sides: '%',
         qty: 4,
-        modifiers: null,
+        modifiers: new Map(),
         max: 100,
         min: 1,
         name: 'PercentileDice',
@@ -200,7 +200,7 @@ describe('PercentileDice', () => {
       expect(JSON.parse(JSON.stringify(die))).toEqual({
         max: 100,
         min: 1,
-        modifiers: null,
+        modifiers: { },
         name: 'PercentileDice',
         notation: '4d%',
         qty: 4,

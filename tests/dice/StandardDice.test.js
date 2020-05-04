@@ -14,7 +14,7 @@ describe('StandardDice', () => {
         notation: '4d6',
         sides: 6,
         qty: 4,
-        modifiers: null,
+        modifiers: new Map(),
         max: 6,
         min: 1,
         name: 'StandardDice',
@@ -215,7 +215,7 @@ describe('StandardDice', () => {
       expect(JSON.parse(JSON.stringify(die))).toEqual({
         max: 6,
         min: 1,
-        modifiers: null,
+        modifiers: { },
         name: 'StandardDice',
         notation: '4d6',
         qty: 4,

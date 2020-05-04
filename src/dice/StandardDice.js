@@ -55,7 +55,7 @@ class StandardDice {
       return new Map([...this[modifiersSymbol]].sort((a, b) => a[1].order - b[1].order));
     }
 
-    return null;
+    return new Map();
   }
 
   /**

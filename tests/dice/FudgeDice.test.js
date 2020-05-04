@@ -17,7 +17,7 @@ describe('FudgeDice', () => {
         notation: '4dF',
         sides: 'F.2',
         qty: 1,
-        modifiers: null,
+        modifiers: new Map(),
         max: 1,
         min: -1,
         name: 'FudgeDice',
@@ -264,7 +264,7 @@ describe('FudgeDice', () => {
       expect(JSON.parse(JSON.stringify(die))).toEqual({
         max: 1,
         min: -1,
-        modifiers: null,
+        modifiers: { },
         name: 'FudgeDice',
         notation: '4dF',
         qty: 4,
