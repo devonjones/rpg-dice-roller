@@ -32,14 +32,14 @@ You can read more about it in the [Notation section](notation/readme.md).
 * [Target failure](notation/modifiers.md#target-failures--dice-pool-fcp)
 * [Sort dice](notation/modifiers.md#sorting-s--sa--sd)
 
+**Group rolls** <Badge text="New" vertical="middle"/>
+
+* [Group rolls](notation/group-rolls.md)
+
 **Mathematical equations**
 
 * [Operators](notation/maths.md#operators)
 * [Functions](notation/maths.md#functions)
-
-**Coming soon**
-
-* [Group rolls](notation/group-rolls.md)
 
 
 ## Browser support

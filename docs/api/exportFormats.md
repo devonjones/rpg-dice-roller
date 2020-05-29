@@ -6,8 +6,8 @@ It has the following properties:
 
 ```js
 {
-  JSON: 0,    // export as a JSON encoded string
-  BASE_64: 1, // export as a base64 encoded string
+  JSON: 0,     // export as a JSON encoded string
+  BASE_64: 1,  // export as a base64 encoded string
   OBJECT: 2,   // export a raw object
 }
 ```

@@ -112,7 +112,8 @@ The syntax for penetrating is very similar to exploding, but with a lowercase 'p
 For example:
 
 ```
-2d6!p: [6!p, 5!p, 5!p, 3, 1] = 20 // Actual rolls are [6, 6, 6, 4, 1]
+// Actual rolls are [6, 6, 6, 4, 1]
+2d6!p: [6!p, 5!p, 5!p, 3, 1] = 20
 ```
 The first roll exploded (Rolled the highest number on the die), so we rolled again and subtracted 1 from the re-roll. The second and third rolls also exploded and were re-rolled, so we subtract 1 from each.
 
@@ -142,13 +143,15 @@ This is similar to [Exploding](#exploding-cp), but explode will keep the previou
 To re-roll, add an `r` after the dice notation:
 
 ```
-d6r // roll 1 d6 and re-roll if the result is 1 (and again each time a 1 is rolled)
+// roll 1 d6 and re-roll if the result is 1 (and again each time a 1 is rolled)
+d6r
 ```
 
 If you only want to re-roll once, even if the second roll also rolls the minimum value, you can use the `ro` notation:
 
 ```
-d6ro // roll 1 d6 and re-roll if the result is 1. Don't re-roll again, even if the second roll is also a 1
+// roll 1 d6 and re-roll if the result is 1. Don't re-roll again, even if the second roll is also a 1
+d6ro
 ```
 
 If you want to change the number that a dice will re-roll on, you can use a [Compare Point](#compare-point):
@@ -168,7 +171,7 @@ Read more about [Compare Points below](#compare-point).
 
 **Order:** 3
 
-The keep modifier allows you to roll a collection of dice but to disregard all except for the highest or lowest result.
+The keep modifier allows you to roll a collection of dice but to disregard all except for the highest or lowest result(s).
 It is the opposite of the [Drop modifier](#drop-dn-dhn-dln).
 
 The notation of the keep modifier is a lowercase `k`, followed by the end that should be dropped ("h" = "highest", "l" = "lowest"), and then the number of dice to drop.
@@ -192,7 +195,7 @@ When outputting the roll, the kept rolls aren't modified, but the dropped rolls 
 ::: roll 6d8k3 :::
 
 ::: tip Using Drop and Keep modifiers together
-The keep and drop modifiers work really well together, but there're some caveats.
+The keep and [drop](#drop-dn-dhn-dln) modifiers work really well together, but there are some caveats.
 They both look at the entire dice pool. So if a roll has been dropped, it will be still be included in the list of possible rolls to drop.
 
 This means that using keep and drop modifiers together can override each other.
@@ -253,7 +256,7 @@ See the note in the [Keep modifier section](#keep-kn-khn-kln) regarding using th
 :::
 
 
-## Target Success / Dice pool (`{cp}`)
+## Target success / Dice pool (`{cp}`)
 
 **Order:** 5
 
@@ -319,7 +322,8 @@ For each failure counted, it will _subtract 1_ from the total number of success 
 The Failure modifier is a [Compare Point](#compare-point), preceded with the lowercase letter "f":
 
 ```
-4d6>4f<3: [2_, 5*, 4, 5*] = 1 // greater than 4 is success, less than 3 is failure
+// greater than 4 is success, less than 3 is failure
+4d6>4f<3: [2_, 5*, 4, 5*] = 1
 ```
 
 ::: roll 4d6>4f<3 :::
@@ -340,13 +344,15 @@ However, sometimes you want a critical success to be on a different value, or a 
 To specify what is considered as a critical success, add `cs` and a [Compare Point](#compare-point), after the die notation:
 
 ```
-4d10cs>7 // roll a d10 4 times, anything greater than 7 is a critical success
+// roll a d10 4 times, anything greater than 7 is a critical success
+4d10cs>7
 ```
 
 The roll result output will look something like this:
 
 ```
-5d20cs>=16: [3, 20**, 18**, 15, 6] = 62 // the rolls of 20 and 18 are critical successes
+// the rolls of 20 and 18 are critical successes
+5d20cs>=16: [3, 20**, 18**, 15, 6] = 62
 ```
 
 ::: roll 5d20cs>=16 :::
@@ -367,13 +373,15 @@ However, sometimes you want a critical failure to be on a different value, or a 
 To specify what is considered as a critical failure, add `cf` and a [Compare Point](#compare-point), after the die notation:
 
 ```
-4d10cf<3 // roll a d10 4 times, anything less than 3 is a critical failure
+// roll a d10 4 times, anything less than 3 is a critical failure
+4d10cf<3
 ```
 
 The roll result output will look something like this:
 
 ```
-5d20cf<=6: [3__, 20, 18, 15, 6__] = 62 // the rolls of 3 and 6 are critical failures
+// the rolls of 3 and 6 are critical failures
+5d20cf<=6: [3__, 20, 18, 15, 6__] = 62
 ```
 
 ::: roll 5d20cf<=6 :::

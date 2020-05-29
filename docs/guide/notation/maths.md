@@ -40,9 +40,9 @@ Parenthesis are recognised anywhere in notations to group sections and define th
 
 You can also use an array of mathematical formulas and functions.
 
-It works with the following [Javascript math functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math#Methods):
+It works with the following [Javascript math functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math#Static_methods):
 
-`abs`, `ceil`, `cos`, `exp`, `floor`, `log`, `round`, `sign`, `sin`, `sqrt`, `tan`, `pow`, `max`, `min`
+`abs`, `ceil`, `cos`, `exp`, `floor`, `log`, `max`, `min`, `pow`, `round`, `sign`, `sin`, `sqrt`, `tan`
 
 Some examples:
 
